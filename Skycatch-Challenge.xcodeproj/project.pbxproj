@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		254C04BD20772BFB00AD8046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254C04BC20772BFB00AD8046 /* AppDelegate.swift */; };
-		254C04C020772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 254C04BE20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld */; };
 		254C04C220772BFB00AD8046 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254C04C120772BFB00AD8046 /* MasterViewController.swift */; };
 		254C04C420772BFB00AD8046 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254C04C320772BFB00AD8046 /* DetailViewController.swift */; };
 		254C04C720772BFB00AD8046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254C04C520772BFB00AD8046 /* Main.storyboard */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		254C04B920772BFB00AD8046 /* Skycatch-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skycatch-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		254C04BC20772BFB00AD8046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		254C04BF20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skycatch_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		254C04C120772BFB00AD8046 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		254C04C320772BFB00AD8046 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		254C04C620772BFB00AD8046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 		254C04D520772C2D00AD8046 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				254C04BE20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld */,
 				2560BDDF207EEBB6001637F0 /* Row.swift */,
 				2560BDE1207EEC13001637F0 /* Column.swift */,
 			);
@@ -184,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				254C04BD20772BFB00AD8046 /* AppDelegate.swift in Sources */,
-				254C04C020772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld in Sources */,
 				254C04C220772BFB00AD8046 /* MasterViewController.swift in Sources */,
 				2560BDE2207EEC13001637F0 /* Column.swift in Sources */,
 				254C04C420772BFB00AD8046 /* DetailViewController.swift in Sources */,
@@ -374,19 +370,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		254C04BE20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				254C04BF20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodel */,
-			);
-			currentVersion = 254C04BF20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodel */;
-			path = Skycatch_Challenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 254C04B120772BFB00AD8046 /* Project object */;
 }
