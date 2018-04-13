@@ -9,8 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var detailDescriptionTextView: UITextView!
     
     var rows: [Row]? {
         didSet {
@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     }
     
     func configureView() {
-        if let label = detailDescriptionLabel {
+        if let label = detailDescriptionTextView {
             var labelString = ""
             
             rows?.forEach({row in
