@@ -14,6 +14,9 @@
 		254C04C720772BFB00AD8046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254C04C520772BFB00AD8046 /* Main.storyboard */; };
 		254C04C920772BFB00AD8046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 254C04C820772BFB00AD8046 /* Assets.xcassets */; };
 		254C04CC20772BFB00AD8046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254C04CA20772BFB00AD8046 /* LaunchScreen.storyboard */; };
+		254C04D820772C4E00AD8046 /* SFGovAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254C04D720772C4E00AD8046 /* SFGovAPI.swift */; };
+		2560BDE0207EEBB6001637F0 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560BDDF207EEBB6001637F0 /* Row.swift */; };
+		2560BDE2207EEC13001637F0 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560BDE1207EEC13001637F0 /* Column.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		254C04C820772BFB00AD8046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		254C04CB20772BFB00AD8046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		254C04CD20772BFB00AD8046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		254C04D720772C4E00AD8046 /* SFGovAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFGovAPI.swift; sourceTree = "<group>"; };
+		2560BDDF207EEBB6001637F0 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		2560BDE1207EEC13001637F0 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,51 @@
 		254C04BB20772BFB00AD8046 /* Skycatch-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				254C04D520772C2D00AD8046 /* Models */,
+				254C04D420772C1D00AD8046 /* Views */,
+				254C04D320772C0D00AD8046 /* Controllers */,
+				254C04CD20772BFB00AD8046 /* Info.plist */,
+			);
+			path = "Skycatch-Challenge";
+			sourceTree = "<group>";
+		};
+		254C04D320772C0D00AD8046 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				254C04D620772C3B00AD8046 /* APIs */,
 				254C04BC20772BFB00AD8046 /* AppDelegate.swift */,
 				254C04C120772BFB00AD8046 /* MasterViewController.swift */,
 				254C04C320772BFB00AD8046 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		254C04D420772C1D00AD8046 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				254C04C520772BFB00AD8046 /* Main.storyboard */,
 				254C04C820772BFB00AD8046 /* Assets.xcassets */,
 				254C04CA20772BFB00AD8046 /* LaunchScreen.storyboard */,
-				254C04CD20772BFB00AD8046 /* Info.plist */,
-				254C04BE20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld */,
 			);
-			path = "Skycatch-Challenge";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		254C04D520772C2D00AD8046 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				254C04BE20772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld */,
+				2560BDDF207EEBB6001637F0 /* Row.swift */,
+				2560BDE1207EEC13001637F0 /* Column.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		254C04D620772C3B00AD8046 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				254C04D720772C4E00AD8046 /* SFGovAPI.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +186,10 @@
 				254C04BD20772BFB00AD8046 /* AppDelegate.swift in Sources */,
 				254C04C020772BFB00AD8046 /* Skycatch_Challenge.xcdatamodeld in Sources */,
 				254C04C220772BFB00AD8046 /* MasterViewController.swift in Sources */,
+				2560BDE2207EEC13001637F0 /* Column.swift in Sources */,
 				254C04C420772BFB00AD8046 /* DetailViewController.swift in Sources */,
+				2560BDE0207EEBB6001637F0 /* Row.swift in Sources */,
+				254C04D820772C4E00AD8046 /* SFGovAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

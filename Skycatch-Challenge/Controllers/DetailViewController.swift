@@ -11,14 +11,22 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    
+    var rows: [Row]? {
+        didSet {
+            configureView()
+        }
+    }
+    
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.timestamp!.description
-            }
+        if let label = detailDescriptionLabel {
+            var labelString = ""
+            
+            rows?.forEach({row in
+                labelString += row.toString() + "\r\r"
+            })
+            
+            label.text = labelString
         }
     }
 
@@ -32,14 +40,4 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    var detailItem: Event? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
-
 }
-
