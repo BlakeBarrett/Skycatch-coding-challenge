@@ -15,7 +15,7 @@ class MasterViewController: UITableViewController {
     let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshData(_:)))
     
     var rows: [Row]?
-    var locations: [String]?
+    var movies: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
             DispatchQueue.main.async(execute: { () -> Void in
-                self.prepare(controller: controller, with: (rows: self.rows!, locations: self.locations!))
+                self.prepare(controller: controller, with: (rows: self.rows!, movies: self.movies!))
             })
         }
     }
@@ -65,12 +65,12 @@ extension MasterViewController {
     func prepare(controller: DetailViewController, with data: SFGovAPIResponse) {
         if let indexPath = tableView.indexPathForSelectedRow {
             
-            let location = data.locations[indexPath.row]
-            let moviesOnLocation = data.rows.filter({
-                $0.wasShot(on: location)
+            let movie = data.movies[indexPath.row]
+            let movieLocations = data.rows.filter({
+                $0.movieString == movie
             })
             
-            controller.rows = moviesOnLocation
+            controller.rows = movieLocations
         }
         
         controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -82,9 +82,9 @@ extension MasterViewController {
 extension MasterViewController {
     func fetch() {
         refreshButton.isEnabled = false
-        SFGovAPI.fetch({[weak self] rows, locations in
+        SFGovAPI.fetch({[weak self] rows, movies in
             self?.rows = rows
-            self?.locations = locations
+            self?.movies = movies
             
             self?.tableView.reloadData()
             self?.refreshButton.isEnabled = true
@@ -101,13 +101,13 @@ extension MasterViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locations?.count ?? 0
+        return movies?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        if let loc = locations?[indexPath.row] {
+        if let loc = movies?[indexPath.row] {
             cell.textLabel?.text = loc
         }
         

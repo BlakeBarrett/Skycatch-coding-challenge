@@ -9,7 +9,7 @@
 import Foundation
 
 typealias JSON = [String: Any]
-typealias SFGovAPIResponse = (rows: [Row], locations: [String])
+typealias SFGovAPIResponse = (rows: [Row], movies: [String])
 typealias SuccessCallback = (SFGovAPIResponse) -> Void
 typealias FailureCallback = ((Any?) -> Void)?
 
@@ -34,10 +34,10 @@ class SFGovAPI {
                     
                     parseColumns(from: json)
                     let rows = parseRows(from: json, with: Column.allColumns)
-                    let locations = Array(Set( rows.map({ $0.location }) ))
+                    let movies = Array(Set( rows.map({ $0.movieString }) ))
                     
                     DispatchQueue.main.async(execute: { () -> Void in
-                        success((rows, locations))
+                        success((rows, movies))
                     })
                 } else {
                     DispatchQueue.main.async(execute: { () -> Void in

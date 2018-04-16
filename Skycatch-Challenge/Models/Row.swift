@@ -16,6 +16,10 @@ class Row {
         self.value = value
     }
     
+    var movieString: String {
+        return "\(title) (\(releaseYear))"
+    }
+    
     var title: String {
         return valueFor(Column.title)
     }
