@@ -17,6 +17,8 @@ class MasterViewController: UITableViewController {
     var rows: [Row]?
     var movies: [String]?
     
+    let reuseIdentifier = "Cell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -105,7 +107,7 @@ extension MasterViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         
         if let loc = movies?[indexPath.row] {
             cell.textLabel?.text = loc

@@ -16,6 +16,7 @@
 		254C04D820772C4E00AD8046 /* SFGovAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254C04D720772C4E00AD8046 /* SFGovAPI.swift */; };
 		2560BDE0207EEBB6001637F0 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560BDDF207EEBB6001637F0 /* Row.swift */; };
 		2560BDE2207EEC13001637F0 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560BDE1207EEC13001637F0 /* Column.swift */; };
+		25D5DD042085498000D14722 /* GooglePlacesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D5DD032085498000D14722 /* GooglePlacesAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		254C04D720772C4E00AD8046 /* SFGovAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFGovAPI.swift; sourceTree = "<group>"; };
 		2560BDDF207EEBB6001637F0 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		2560BDE1207EEC13001637F0 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		25D5DD032085498000D14722 /* GooglePlacesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				254C04D720772C4E00AD8046 /* SFGovAPI.swift */,
+				25D5DD032085498000D14722 /* GooglePlacesAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D5DD042085498000D14722 /* GooglePlacesAPI.swift in Sources */,
 				254C04BD20772BFB00AD8046 /* AppDelegate.swift in Sources */,
 				254C04C220772BFB00AD8046 /* MasterViewController.swift in Sources */,
 				2560BDE2207EEC13001637F0 /* Column.swift in Sources */,
